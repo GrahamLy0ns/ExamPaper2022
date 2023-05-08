@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamPaper2022"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="listBoxTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Image}" Width="30" Margin="5"></Image>
+                <TextBlock FontSize="24" Margin="5">
+                    <Run Text="{Binding Location}"/>
+                    <Run Text=" "/>
+                    <Run Text="{Binding Price}"/>
+                </TextBlock>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        
+        <ListBox ItemTemplate="{StaticResource listBoxTemplate}"  x:Name="propertiesListBox" Margin="31,90,413,52" SelectionChanged="propertiesListBox_SelectionChanged"/>
+        <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="716,90,0,0" VerticalAlignment="Top" Height="25" Width="62" Click="addButton_Click"/>
+        <TextBlock x:Name="textDisplay" HorizontalAlignment="Left" Margin="462,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="292" Width="224" FontSize="14"/>
+
     </Grid>
 </Window>

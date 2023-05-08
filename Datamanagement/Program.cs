@@ -18,7 +18,8 @@ namespace Datamanagement
             RentalProperty p1 = new RentalProperty()
             {
                 Price = 400,
-                RentalType = RentalType.House,
+                Image = "imgs/apartment.png",
+                RentalType = RentalType.Flat,
                 Description = "A modern 1 bedroom apartment located close to the campus." +
                     "  The accomodation comprises of 1 en-suite bedroom with a study area, " +
                     "a small kitchen and a lounge/dining room",
@@ -27,7 +28,8 @@ namespace Datamanagement
 
             RentalProperty p2 = new RentalProperty()
             {
-                Price = 400,
+                Price = 300,
+                Image = "imgs/house.jpg",
                 RentalType = RentalType.House,
                 Description = "A modern 4 bedroom townhouse located 2 km from the campus. " +
                 "The house has 4 large double bedrooms with ample space for a desk, " +
@@ -38,7 +40,8 @@ namespace Datamanagement
 
             RentalProperty p3 = new RentalProperty()
             {
-                Price = 400,
+                Price = 200,
+                Image = "imgs/people.png",
                 RentalType = RentalType.Share,
                 Description = "1 bedroom available to share in a 3 bedroom house located in the " +
                 "beautiful seaside village of Strandhill.  The property is located on the bus route to " +
